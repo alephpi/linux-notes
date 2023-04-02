@@ -1,0 +1,13 @@
+系统：deepin v20.8
+
+时间： 2023-4-2
+
+换 deepin 之前我使用的是 win 上面的小狼毫输入法，当时辛辛苦苦配了一套英文输入方案[JumpType](https://github.com/alephpi/JumpType)已经用顺手了，得想办法迁移过来。
+
+Linux 上小狼毫的胞兄叫中州韵，它的原生版本是 ibus-rime，奈何在 deepin 上支持不佳，只好用 fcitx-rime。装 fcitx-rime 的过程特别曲折，因为我参考了很多以往失败的经验帖，什么把 fcitx 全卸了再装等等，反而把自己绕进去了。事实上那些经验帖年代太久远了（应该还停留在 deepin v15），早已不适合我的情况。最后我简单`apt install fcitx-rime`就有了。
+
+因为有了配置小狼毫的经验，这次配置 fcitx-rime 并不困难，复制粘贴足以。有一两处稍稍修改了一下。譬如把 `switch/hotkey` 换成了 `Super_L`这是因为 deepin 上面`capslock`没办法映射为`ScrollLock`。此外由于 vscode 的 vim 插件支持在 normal mode 和 edit mode 切换时记忆输入法状态了，我也删去了原来专门调的`ascii_mode`。这下子码字体验会比 win 上面更好些。
+
+最后还有一个问题就是系统自带的字体不够支持 rime 上所有字码，rime gitter 上有人建议用花园明朝体，但我不想为了一个输入法改变所有系统字体（因为似乎没有 fallback 的功能），加上那些生僻字多半用不上，缺失就缺失吧。
+
+最后希望 deepin 赶快支持`fcitx5-rime`吧，2021 年就有人在论坛上劝了。。。我一度想自己编译，奈何水平不够。
