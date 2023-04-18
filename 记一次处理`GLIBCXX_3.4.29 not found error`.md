@@ -14,7 +14,7 @@ strings libstdc++.so.6 | grep GLIBCXX
 
 2. 如果有 GLIBCXX 3.4.29，则转到 3，否则 4
 3. 运行
-   `export LD_LIBRARY_PATH=~/micromamba/lib`
+   `export LD_LIBRARY_PATH=~/micromamba/lib` (也可直接加入`~/.bashrc`，自动添加路径。)
 4. 如果没有 GLIBCXX 3.4.29，运行
    `ls libstdc++.so.6* -l`看看.so.6 符号链接到的版本是什么
    我的是链接到了 6.0.30 没问题。如果太老的话，micromamba update 再 upgrade 一下（micromamba 在这里的地位就和 apt 一样），完了转到 3。
